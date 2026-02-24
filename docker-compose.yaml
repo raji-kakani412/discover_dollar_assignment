@@ -12,8 +12,9 @@ services:
       - mongo-data:/data/db
 
   backend:
-    build: ./backend
-    container_name: rajikakani412/backend
+    
+    image: rajikakani412/backend
+    container_name: backend
     restart: always
     ports:
       - "5000:5000"
@@ -23,8 +24,9 @@ services:
       - mongodb
 
   frontend:
-    build: ./frontend
-    container_name: rajikakani412/frontend
+    
+    image: rajikakani412/frontend
+    container_name: frontend
     restart: always
     depends_on:
       - backend
