@@ -28,18 +28,9 @@ services:
     image: rajikakani412/frontend:v1
     container_name: frontend
     restart: always
-    depends_on:
-      - backend
-
-  nginx:
-    image: nginx:alpine
-    container_name: nginx
     ports:
-      - "80:80"
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    - "8081:80"
     depends_on:
-      - frontend
       - backend
 
 volumes:
