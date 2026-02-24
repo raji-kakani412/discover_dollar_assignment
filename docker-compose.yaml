@@ -13,7 +13,7 @@ services:
 
   backend:
     
-    image: rajikakani412/backend
+    image: rajikakani412/backend:v1
     container_name: backend
     restart: always
     ports:
@@ -25,7 +25,7 @@ services:
 
   frontend:
     
-    image: rajikakani412/frontend
+    image: rajikakani412/frontend:v1
     container_name: frontend
     restart: always
     depends_on:
